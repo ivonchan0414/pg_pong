@@ -3,8 +3,6 @@ import tensorflow as tf
 import pong_game
 import numpy as np
 
-import matplotlib.pyplot as plt
-
 restore = False
 mainloop = True
 gamma = 0.96
@@ -130,8 +128,6 @@ while mainloop:
 
     last_frame = next_frame
 
-    # plt.imshow(next_frame)
-    # plt.show()
 
 
 
