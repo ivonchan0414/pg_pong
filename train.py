@@ -24,15 +24,6 @@ def build_model():
     Y = tf.nn.softmax(L_2, axis=0)
     return Y
 
-def discont_reward(reward_, discont_factor_ = 0.8):
-    reward_ = np.array(reward_)
-    episode_length = reward_.size
-    disconted_reward = np.zeros(reward_.shape)
-    for t in reversed(range(0, episode_length)):
-        disconted_reward[t] = reward_[episode_length - 1] * discont_factor_ ** (episode_length - 1 - t)
-    return disconted_reward
-
-
 def discount_rewards(r):
   discounted_r = np.zeros_like(r)
   running_add = 0
